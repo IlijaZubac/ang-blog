@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PostscomponentComponent } from './postscomponent/postscomponent.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { PostsserviceService } from './postsservice.service';
 
 
 @NgModule({
@@ -14,9 +16,11 @@ import { PostscomponentComponent } from './postscomponent/postscomponent.compone
     PostscomponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [ PostsserviceService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

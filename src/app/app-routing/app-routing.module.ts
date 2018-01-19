@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule , Routes } from '@angular/router';
+import { PostscomponentComponent } from '../postscomponent/postscomponent.component';
 
 const appRoutes: Routes = [
   {
@@ -8,6 +9,10 @@ const appRoutes: Routes = [
     redirectTo: '/posts',
     pathMatch: 'full'
   },
+  {
+    path: 'posts',
+    component: PostscomponentComponent
+  }
 ]
 
 @NgModule({
