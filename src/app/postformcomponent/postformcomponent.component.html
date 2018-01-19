@@ -1,0 +1,8 @@
+<form #postForm="ngForm" (ngSubmit)="submit(newPost)">
+  <label>Title:</label>
+  <input type="text" name="title" [(ngModel)]="newPost.title"/>
+  <label>Text:</label>
+  <input type="text" name="text" [(ngModel)]="newPost.text"/>   
+  <button type="submit" >Add Post</button>
+</form>
+<router-outlet></router-outlet>

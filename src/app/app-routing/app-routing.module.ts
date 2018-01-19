@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule , Routes } from '@angular/router';
 import { PostscomponentComponent } from '../postscomponent/postscomponent.component';
+import { PostformcomponentComponent } from '../postformcomponent/postformcomponent.component';
 
 const appRoutes: Routes = [
   {
@@ -12,7 +13,12 @@ const appRoutes: Routes = [
   {
     path: 'posts',
     component: PostscomponentComponent
+  },
+  {
+    path: 'add',
+    component: PostformcomponentComponent
   }
+
 ]
 
 @NgModule({

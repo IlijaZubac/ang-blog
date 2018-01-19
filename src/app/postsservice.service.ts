@@ -35,4 +35,7 @@ export class PostsserviceService {
   getPosts(){
     return this.posts;
   } 
+  addPost(newPost){
+    this.posts.push(newPost)
+  }
 }
