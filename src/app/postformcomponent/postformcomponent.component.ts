@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
 import { PostsserviceService } from '../postsservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-postformcomponent',
@@ -9,9 +10,9 @@ import { PostsserviceService } from '../postsservice.service';
 })
 export class PostformcomponentComponent implements OnInit {
 
-  posts: Array<Object>;
-  newPost = {};
-  constructor(private postservice: PostsserviceService) { 
+  private newPost: Post = new Post();
+
+  constructor(private router : Router, private postservice: PostsserviceService) { 
     this.postservice = postservice;
   }
 
@@ -22,13 +23,9 @@ export class PostformcomponentComponent implements OnInit {
     this.postservice.addPost(this.newPost)
   }
   submit (){
-    this._postservice.addPost(post)
+    this.postservice.addPost(this.newPost);
     this.router.navigate(['/posts']);
   }
 }
 
-/*public addCar(car: Car) {
-  this.cars.push(new Car({
-    id: this.idCount,
-    ...car
-}));*/
+ 
