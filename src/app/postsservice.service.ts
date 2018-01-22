@@ -6,8 +6,8 @@ import { Post } from './post';
 export class PostsserviceService {
 
   private posts: Post[] = [];
-  private idCount = 1;
-
+ 
+  private idCount = 3;
   constructor() {  
 // sad sam menjao ovaj zapis jer nije hteo da radi sa predhodnim tj nije ispisivao id brojeve
     let firstPost = new Post 
@@ -33,9 +33,7 @@ export class PostsserviceService {
       );
 
     this.posts.push(firstPost, secondPost, thirdPost);
-    this.addPost(firstPost);
-    this.addPost(secondPost);
-    this.addPost(thirdPost);
+   
   } 
   public getPosts(){
     return this.posts;
@@ -45,4 +43,7 @@ export class PostsserviceService {
     this.posts.push(post);
     this.idCount++
   }
+   public getById(id: number){
+     return this.posts.find((p: Post) => p.id === id);
+   }
 }

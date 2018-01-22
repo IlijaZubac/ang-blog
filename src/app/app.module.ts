@@ -9,6 +9,7 @@ import { PostscomponentComponent } from './postscomponent/postscomponent.compone
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { PostsserviceService } from './postsservice.service';
 import { PostformcomponentComponent } from './postformcomponent/postformcomponent.component';
+import { SinglePostComponent } from './single-post/single-post.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PostformcomponentComponent } from './postformcomponent/postformcomponen
     AppComponent,
     LayoutComponent,
     PostscomponentComponent,
-    PostformcomponentComponent
+    PostformcomponentComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,

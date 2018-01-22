@@ -1,9 +1,9 @@
 export class Post {
         
-    id: number;
-    title: string;
-    text: string;
-    created_at: string;
+    public id?: number;
+    public title?: string;
+    public text?: string;
+    public created_at?: string;
 
     constructor(id: number, title: string, text: string, created_at:string) {
 
